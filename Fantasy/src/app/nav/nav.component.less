@@ -1,0 +1,42 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 3rem;
+    color: white;
+    border-radius: 10px;
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+  }
+
+  .navbar-links li
+  {
+    border-radius: 10px;
+  }
+  
+  .navbar-links li i {
+    font-size: 1.3rem;
+    margin: 0;
+    color: white;
+    padding: 0.8rem 1rem;
+    text-decoration: none;
+  }
+  
+  .navbar-links li i:hover {
+    background-color: #35363b;
+    border-radius: 10px;
+    border-bottom: 2px solid #f5075b;
+    background: linear-gradient(to top, rgba(245, 7, 91, 0.4) 10%, rgba(31, 32, 36, 0.1) 70%);
+  }
+  
+  .navbar-links li i.active-link {
+    color: #f5075b; /* Change this to your desired active link color */
+    border-bottom: 2px solid #f5075b;
+    border-radius: 10px;
+    background: linear-gradient(to top, rgba(245, 7, 91, 0.4) 10%, rgba(31, 32, 36, 0.1) 70%);
+  }

@@ -1,0 +1,16 @@
+<h2>Players</h2>
+<div *ngIf="players.length > 0; else noPlayers">
+    <div *ngFor="let player of players" class="player-container layer1 bradius">
+      <!-- <img [src]="player.img" alt="{{ player.name }}'s image" width="50"> -->
+      <h3>{{ player.name }}</h3>
+      <p>Position: {{ player.position }}</p>
+      <p>Team: {{ player.team }}</p>
+      <p>League: {{ player.league }}</p>
+      <p>Owner: {{ player.owner }}</p>
+      <p>Token ID: {{ player.tokenId }}</p>
+    </div>
+  </div>
+  
+  <ng-template #noPlayers>
+    <p>No players found.</p>
+  </ng-template>

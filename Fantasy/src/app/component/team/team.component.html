@@ -1,0 +1,18 @@
+<h2>Teams</h2>
+
+<div class="tm" *ngIf="teams.length > 0; else noTeams">
+    <div *ngFor="let team of teams">
+        <div class="team-container layer1 bradius" (click)="togglePlayers(team)">
+        <h3>{{ team.name }}</h3>
+        <img src="{{team.image}}" width="100">
+        </div>
+
+        <app-players *ngIf="selectedTeam === team" 
+                [league]="league" 
+                [team]="selectedTeam.name"></app-players>
+    </div>
+</div>
+
+<ng-template #noTeams>
+    <p>No teams available.</p>
+</ng-template>

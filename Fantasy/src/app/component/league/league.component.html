@@ -1,0 +1,23 @@
+<h1>Leagues</h1>
+<div *ngIf="leagues.length > 0; else noLeagues">
+  <div *ngFor="let league of leagues">
+      <div class="league-container layer1 bradius" (click)="toggleTeams(league)">
+          <h3>{{ league.league }}</h3>
+          <img src="{{league.image}}" alt="{{ league.league }} logo" width="100">
+          <p>Entry price: {{ league.price }} GAS</p>
+          <p>Users Joined: {{ league.usersJoined?.length || 0 }}</p>
+      </div>
+
+      <app-team *ngIf="selectedLeague === league" [teams]="league.teams" [league]="league.league"></app-team>
+  </div>
+</div>
+
+
+<!-- 
+  <div *ngFor="let team of league.teams">
+    <p>{{ team.name }}</p>
+  </div> -->
+  
+  <ng-template #noLeagues>
+    <p>No leagues available.</p>
+  </ng-template>
